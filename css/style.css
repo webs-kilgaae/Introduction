@@ -11,14 +11,12 @@ html {
 
 body {
 	font-size: 16px;
-	font-family: Pretendard, -apple-system, BlinkMacSystemFont, Bazier Square, Noto Sans KR, Segoe UI,
-		Apple SD Gothic Neo, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
-		Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	font-family: 'Noto Sans KR', sans-serif;
 	letter-spacing: -0.3px;
 	color: #222222;
 	padding-bottom: 2rem;
 	line-height: 1.75;
-	word-wrap: break-word;
+	word-break: keep-all;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -34,8 +32,10 @@ img {
 }
 
 h1 {
+	font-family: 'Jua', sans-serif;
 	font-size: 3.2rem;
 	line-height: 1.1;
+	font-weight: 400;
 }
 
 h2 {
@@ -131,7 +131,7 @@ a {
 	/* display: block;
 	position: relative;
 	padding-left: 42px; */
-	line-height: 30px;
+	line-height: 2rem;
 }
 
 /* .sideBox .contactBox li::before {
@@ -218,12 +218,12 @@ section {
 }
 
 .project_list .txt_r {
-	width: 184px;
+	width: 144px;
 }
 
 .project_list .txt_1 {
 	padding-left: 24px;
-	width: calc(100% - 184px);
+	width: calc(100% - 144px);
 }
 
 .project_list .txt_1 p {
@@ -279,6 +279,10 @@ section {
 	display: none;
 }
 
+.typeBox .type {
+	display: flex;
+}
+
 .typeBox .type + .type {
 	margin-top: 16px;
 }
@@ -296,19 +300,41 @@ section {
 	border: 1px solid #ddd;
 	border-radius: 18px;
 	padding: 0px 14px 1px;
+	margin-right: 10px;
 }
 
-.typeBox li + li {
-	margin-left: 10px;
+.typeBox li:hover {
+	color: #3560f8;
+	border: 1px solid #3560f8;
 }
 
+.pc {
+	display: block;
+}
+
+.mo {
+	display: none;
+}
 @media (max-width: 960px) {
 	html,
 	body {
 		font-size: 14px;
 	}
 
-	.wrapper {
+	.mo {
+		display: block;
+	}
+
+	.pc {
+		display: none;
+	}
+
+	time.mo {
+		margin: 1rem 0;
+		font-size: 0.8rem;
+	}
+
+	.container {
 		flex-direction: column;
 	}
 
@@ -321,11 +347,32 @@ section {
 		width: 100%;
 	}
 
-	.project li {
+	.project_list li {
 		flex-direction: column;
 	}
+	.project_list > ul > li {
+		border-top: 1px solid #ddd;
+		margin-top: -1.6rem;
+		padding-top: 1.6rem;
+	}
 
-	.project .txt_1::before {
+	.project_list .txt_1 {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.project_list .txt_1::before,
+	.project_list .txt_1::after {
 		display: none;
+	}
+
+	.typeBox li {
+		margin-bottom: 6px;
+	}
+
+	.sideBox .imgBox {
+		width: 150px;
+		height: 150px;
+		margin: 24px 0;
 	}
 }
