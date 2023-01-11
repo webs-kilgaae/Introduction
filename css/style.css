@@ -365,7 +365,7 @@ section {
 	.project_list li {
 		flex-direction: column;
 	}
-	.project_list > ul > li {
+	.project_list > ul > li:not(:first-child) {
 		border-top: 1px solid #ddd;
 		margin-top: -1.6rem;
 		padding-top: 1.6rem;
