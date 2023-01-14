@@ -234,9 +234,9 @@ section {
 	width: calc(100% - 250px);
 }
 
-.project_list .txt_1 p {
+/* .project_list .txt_1 p {
 	font-size: 0.9rem;
-}
+} */
 
 .project_list .txt_1 li {
 	font-size: 0.9rem;
@@ -331,26 +331,24 @@ section {
 	}
 
 	.mo {
-		display: block;
+		display: block !important;
 	}
 
 	.pc {
-		display: none;
+		display: none !important;
 	}
 
 	time.mo {
 		margin: 1rem 0;
-		font-size: 0.8rem;
 	}
 
 	.container {
-		flex-direction: column;
-		padding-bottom: 20rem;
+		flex-direction: column-reverse;
 	}
 
 	.content {
 		width: 100%;
-		padding: 4rem 2rem;
+		padding: 3rem 2rem 0;
 	}
 
 	.introdu {
@@ -358,8 +356,10 @@ section {
 	}
 
 	.sideBox {
+		position: relative;
 		width: 100%;
-		bottom: 0;
+		padding: 20px;
+		height: 90px;
 	}
 
 	.project_list li {
@@ -386,13 +386,47 @@ section {
 	}
 
 	.sideBox .contactBox {
-		position: relative;
+		position: absolute;
+		top: 90px;
 		width: 100%;
+		padding: 0 0;
 	}
+
+	.sideBox .contactBox .tit {
+		position: absolute;
+		left: 20px;
+		top: 2px;
+		font-family: 'Jua', sans-serif;
+		font-weight: 400;
+	}
+
+	.sideBox .contactBox li {
+		line-height: 2rem;
+		font-size: 0.8rem;
+		padding-left: 55%;
+	}
+
 	.sideBox .imgBox {
-		position: relative;
-		width: 150px;
-		height: 150px;
-		margin: 24px 0;
+		position: absolute;
+		left: 20px;
+		width: 50px;
+		height: 50px;
+		margin: 0px 0;
+	}
+	.nameBox .name {
+		position: absolute;
+		top: 43px;
+		left: 78px;
+		z-index: 10000;
+		color: #fff;
+		font-size: 2rem;
+	}
+	.nameBox .intro {
+		position: absolute;
+		z-index: 1000;
+		font-size: 0.9rem;
+		color: #fff;
+		top: 24px;
+		left: 78px;
 	}
 }
