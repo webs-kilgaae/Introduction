@@ -405,7 +405,7 @@ section .tit_bar {
 	}
 }
 
-@media (max-width: 573px) {
+@media (max-width: 570px) {
 	.sideBox {
 		height: 125px;
 	}
