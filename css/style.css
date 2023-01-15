@@ -358,7 +358,7 @@ section .tit_bar {
 
 	.sideBox .contactBox {
 		position: absolute;
-		top: 80px;
+		top: 90px;
 		width: 100%;
 		padding: 10px 0;
 	}
@@ -379,6 +379,7 @@ section .tit_bar {
 
 	.sideBox .imgBox {
 		position: absolute;
+		bottom: 12px;
 		left: 20px;
 		width: 50px;
 		height: 50px;
@@ -400,19 +401,16 @@ section .tit_bar {
 		font-size: 0.9rem;
 		color: #fff;
 		left: 61px;
-		bottom: 47px;
+		bottom: 38px;
 		width: calc(100% - 50px);
 	}
 }
 
-@media (max-width: 564px) {
+@media (max-width: 384px) {
 	.sideBox {
-		height: 125px;
-	}
-	.sideBox .imgBox {
-		bottom: 23px;
+		height: 114px;
 	}
 	.sideBox .contactBox {
-		top: 115px;
+		top: 114px;
 	}
 }
