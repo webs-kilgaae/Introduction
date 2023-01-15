@@ -317,11 +317,11 @@ section {
 }
 
 .pc {
-	display: block;
+	display: block !important;
 }
 
 .mo {
-	display: none;
+	display: none !important;
 }
 @media (max-width: 960px) {
 	html,
