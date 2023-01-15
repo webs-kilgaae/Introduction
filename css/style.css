@@ -33,10 +33,8 @@ img {
 }
 
 h1 {
-	font-family: 'Jua', sans-serif;
-	font-size: 3.2rem;
-	line-height: 1.1;
-	font-weight: 400;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 2.8rem;
 }
 
 h2 {
@@ -115,11 +113,13 @@ a {
 }
 
 .sideBox .contactBox .tit {
+	font-family: 'Nanum Gothic', sans-serif;
 	display: block;
-	font-size: 20px;
+	font-size: 1.4rem;
 	position: relative;
 	padding-left: 15px;
 	margin-bottom: 10px;
+	font-weight: 700;
 }
 
 .sideBox .contactBox .tit::before {
@@ -136,38 +136,12 @@ a {
 }
 
 .sideBox .contactBox li {
-	/* display: block;
-	position: relative;
-	padding-left: 42px; */
+	font-family: 'Nanum Gothic', sans-serif;
 	line-height: 2rem;
 }
 
-/* .sideBox .contactBox li::before {
-	content: '';
-	display: block;
-	width: 12px;
-	height: 12px;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	background: #fff;
-	transform: translateY(-50%);
-} */
-
-/* .sideBox .contactBox li::after {
-	content: '';
-	display: block;
-	width: 1px;
-	height: 12px;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%;
-	left: 27px;
-	background: #fff;
-	transform: translateY(-50%);
-} */
-
 section {
+	position: relative;
 	margin-bottom: 50px;
 }
 
@@ -181,21 +155,22 @@ section {
 
 .nameBox .intro {
 	color: #3560f8;
+	width: calc(100% - 360px);
 }
 
-.project .tit_hd {
+section .tit_hd {
 	display: flex;
 	align-items: center;
 	width: 100%;
 }
 
-.project .tit {
+section .tit_hd .tit {
 	position: relative;
 	padding: 0 15px;
 	color: #3560f8;
 }
 
-.project .tit::before {
+section .tit_hd .tit::before {
 	content: '';
 	display: block;
 	width: 6px;
@@ -208,7 +183,7 @@ section {
 	transform: translateY(-50%);
 }
 
-.project .tit_bar {
+section .tit_bar {
 	flex: auto;
 	height: 4px;
 	background: #3560f8;
@@ -233,10 +208,6 @@ section {
 	padding-left: 24px;
 	width: calc(100% - 250px);
 }
-
-/* .project_list .txt_1 p {
-	font-size: 0.9rem;
-} */
 
 .project_list .txt_1 li {
 	font-size: 0.9rem;
@@ -348,7 +319,7 @@ section {
 
 	.content {
 		width: 100%;
-		padding: 3rem 2rem 0;
+		padding: 2rem 20px 0;
 	}
 
 	.introdu {
@@ -387,21 +358,21 @@ section {
 
 	.sideBox .contactBox {
 		position: absolute;
-		top: 90px;
+		top: 80px;
 		width: 100%;
-		padding: 0 0;
+		padding: 10px 0;
 	}
 
 	.sideBox .contactBox .tit {
 		position: absolute;
 		left: 20px;
-		top: 2px;
-		font-family: 'Jua', sans-serif;
-		font-weight: 400;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1rem;
 	}
 
 	.sideBox .contactBox li {
-		line-height: 2rem;
+		line-height: 1.4rem;
 		font-size: 0.8rem;
 		padding-left: 55%;
 	}
@@ -413,20 +384,35 @@ section {
 		height: 50px;
 		margin: 0px 0;
 	}
+
+	.sideBox .imgBox img {
+		width: 92%;
+	}
+
 	.nameBox .name {
-		position: absolute;
-		top: 43px;
-		left: 78px;
-		z-index: 10000;
-		color: #fff;
-		font-size: 2rem;
+		z-index: -10000 !important;
+		font-size: 0 !important;
+		line-height: 0 !important;
 	}
 	.nameBox .intro {
 		position: absolute;
 		z-index: 1000;
 		font-size: 0.9rem;
 		color: #fff;
-		top: 24px;
-		left: 78px;
+		left: 61px;
+		bottom: 47px;
+		width: calc(100% - 50px);
+	}
+}
+
+@media (max-width: 573px) {
+	.sideBox {
+		height: 125px;
+	}
+	.sideBox .imgBox {
+		bottom: 23px;
+	}
+	.sideBox .contactBox {
+		top: 115px;
 	}
 }
